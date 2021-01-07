@@ -1,0 +1,25 @@
+{
+  "name": "liao_wenchiy",
+  "version": "1.0.0",
+  "description": "Ecommerce webpage",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.12.0",
+    "prettier": "^2.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint js/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Chichiy/Front-End-Class-Batch12.git"
+  },
+  "author": "Liao_wenchiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chichiy/Front-End-Class-Batch12/issues"
+  },
+  "homepage": "https://github.com/Chichiy/Front-End-Class-Batch12#readme"
+}

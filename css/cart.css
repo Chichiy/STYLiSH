@@ -1,0 +1,448 @@
+/* tap pay*/
+.tpfield {
+  width: 574px;
+  height: 30px;
+  border-radius: 8px;
+  border: solid 1px #979797;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+/*web page*/
+.view {
+  max-width: 1160px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: NotoSansCJKtc;
+  font-size: 16px;
+  color: #3f3a3a;
+  line-height: 24px;
+  justify-content: flex-end;
+}
+
+.list {
+  border: 1px solid #979797;
+  flex: auto;
+  padding: 25px 15px;
+}
+
+.container .row {
+  flex: auto;
+  display: flex;
+  padding: 15px;
+}
+
+.container > .title {
+  width: 100%;
+  padding-right: 30px;
+}
+
+.row > .product-Info {
+  width: 45%;
+  display: flex;
+}
+
+.row > .product-Info > .main-Image {
+  width: 114px;
+  flex: none;
+}
+
+.row > .product-Info img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.row > .product-Info > .details {
+  display: inline-block;
+  flex: none;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.row > .product-Info > .details > span {
+  font-family: NotoSansCJKtc;
+  font-size: 16px;
+  color: #3f3a3a;
+  line-height: 24px;
+}
+
+.row > .qty {
+  width: 17%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row > .qty > select {
+  font-size: 14px;
+  width: 80px;
+  height: 30px;
+  border-radius: 4px;
+  border: solid 1px #979797;
+  text-align: center;
+  text-align-last: center;
+}
+
+.row > .price {
+  width: 17%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row > .subtotal {
+  width: 17%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row > .remove {
+  width: 4%;
+  display: flex;
+  align-items: center;
+  background-image: url(../img/cart-remove.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.row > .remove:hover {
+  background-image: url(../img/cart-remove-hover.png);
+}
+
+.target {
+  margin-top: 26px;
+  width: 100%;
+  background-color: #e8e8e8;
+  padding: 27px 30px;
+  display: flex;
+}
+
+.target > .country {
+  width: 50%;
+  display: flex;
+}
+
+.target select {
+  width: 170px;
+  margin-left: 20px;
+  border-radius: 4px;
+  border-radius: 4px;
+  border: solid 1px #979797;
+}
+
+.target > .payment {
+  width: 50%;
+  display: flex;
+}
+
+.note {
+  width: 100%;
+  margin-top: 20px;
+}
+.recipient,
+.payment-Info {
+  margin-top: 50px;
+  flex: auto;
+  width: 100%;
+}
+
+.recipient > span,
+.payment-Info > span {
+  font-weight: bold;
+}
+
+.recipient > hr,
+.payment-Info > hr {
+  margin-bottom: 25px;
+}
+
+.recipient > .line,
+.payment-Info > .line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.recipient > .line > span,
+.payment-Info > .line > span {
+  width: 110px;
+}
+.recipient > .line input,
+.payment-Info > .line input {
+  width: 574px;
+  height: 30px;
+  border-radius: 8px;
+  border: solid 1px #979797;
+}
+
+.recipient > .time > .input {
+  display: flex;
+  align-items: center;
+}
+.recipient > .time label {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+}
+.recipient > .time input {
+  width: 16px;
+  height: 16px;
+  border: solid 1px #979797;
+  margin: 0 10px 0 0;
+}
+
+button {
+  padding: 0;
+  border: 0px;
+  outline: none;
+}
+
+.checkout {
+  margin-top: 25px;
+  width: 240px;
+}
+
+.checkout > .line {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.checkout > .line > span:nth-child(2) {
+  flex: auto;
+  text-align: right;
+}
+
+.checkout > .line > span:last-child {
+  font-size: 30px;
+}
+
+.checkout > .checkout-Btn {
+  width: 100%;
+  height: 60px;
+  margin-top: 50px;
+  margin-bottom: 148px;
+  background-color: #000;
+  font-size: 20px;
+  line-height: 60px;
+  letter-spacing: 4px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.checkout > .checkout-Btn:active {
+  font-size: 16px;
+}
+
+.checkout > .checkout-Btn-Disable {
+  color: #ffffff;
+  background-color: #bbb;
+  cursor: auto;
+}
+
+@media (max-width: 1200px) {
+  main > .view {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 1000px) {
+  main > .view {
+    margin-top: 100px;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 700px) {
+  .list {
+    flex: auto;
+    padding: 10px 15px;
+    margin-top: 20px;
+  }
+
+  .container .row {
+    flex: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    position: relative;
+    border-bottom: 1px solid #979797;
+    margin-bottom: 10px;
+  }
+  .container .row:last-child {
+    border-bottom: 0px;
+  }
+  .container > .title {
+    display: none;
+  }
+
+  .row > .product-Info {
+    width: 90%;
+    padding-bottom: 20px;
+  }
+
+  .row > .product-Info > .details {
+    padding-left: 10px;
+  }
+
+  .row > .qty {
+    width: 33%;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .row > .qty > select {
+    font-size: 14px;
+    width: 80px;
+    height: 30px;
+    border-radius: 4px;
+    border: solid 1px #979797;
+    text-align: center;
+    text-align-last: center;
+  }
+
+  .row > .qty::before {
+    width: 100%;
+    content: "數量";
+  }
+
+  .row > .price {
+    width: 33%;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .row > .price::before {
+    width: 100%;
+    content: "單價";
+  }
+  .row > .subtotal {
+    width: 33%;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .row > .subtotal::before {
+    width: 100%;
+    content: "小計";
+  }
+  .row > .remove {
+    width: 15px;
+    height: 20px;
+    flex: none;
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+  }
+  .target {
+    margin-top: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .target > .country {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .target select {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #979797;
+  }
+
+  .target > .payment {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .note {
+    margin-top: 10px;
+  }
+  .recipient,
+  .payment-Info {
+    margin-top: 20px;
+  }
+
+  .recipient > span,
+  .payment-Info > span {
+    font-weight: bold;
+  }
+
+  .recipient > hr,
+  .payment-Info > hr {
+    margin-bottom: 20px;
+  }
+
+  .recipient > .line,
+  .payment-Info > .line {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .recipient > .line > span,
+  .payment-Info > .line > span {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .recipient > .line .input,
+  .payment-Info > .line .input {
+    width: 100%;
+  }
+
+  .recipient > .line input,
+  .payment-Info > .line input {
+    width: 100%;
+  }
+
+  .recipient > .time .input {
+    flex: auto;
+  }
+  .recipient > .time label {
+    flex: auto;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .recipient > .time input {
+    width: 16px;
+    height: 16px;
+    border: solid 1px #979797;
+    margin: 0 10px 0 0;
+  }
+
+  .checkout {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .checkout > .line {
+    margin-left: 20%;
+    margin-bottom: 20px;
+    display: flex;
+    width: 200px;
+  }
+
+  .checkout > hr {
+    margin: 10px 0 10px 20%;
+    width: 200px;
+    text-align: left;
+    border-width: 1px;
+  }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-DV1QQYSV9K"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-DV1QQYSV9K");
+    </script>
+    <title>STYLish 產品資訊</title>
+    <meta
+      name="description"
+      content="Online store sells only the most trending clothes and accessories for all genders."
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <script src="js/fb.js"></script>
+    <script src="js/static.js"></script>
+    <script src="js/product.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="padding-mobile"></div>
+      <div class="logo">
+        <a href="."> <img src="img/logo.png" alt="STYLish logo" /></a>
+      </div>
+      <nav>
+        <div class="menu-btn"><a href="./?tag=women">女裝</a></div>
+        <div class="menu-btn"><a href="./?tag=men">男裝</a></div>
+        <div class="menu-btn"><a href="./?tag=accessories">配件</a></div>
+      </nav>
+      <div class="feature">
+        <form action="./" method="GET" class="input-container">
+          <input type="text" name="search" class="menu-search" id="search" />
+        </form>
+        <a href="./cart.html"
+          ><div class="menu-cart"><div class="menu-cart-qty"></div></div
+        ></a>
+        <div class="menu-user member">
+          <img src="img/member.png" alt="member" />
+        </div>
+      </div>
+    </header>
+    <nav class="mobile-menu">
+      <div class="item"><a href="./?tag=women">女裝</a></div>
+      <div class="item"><a href="./?tag=men">男裝</a></div>
+      <div class="item"><a href="./?tag=accessories">配件</a></div>
+    </nav>
+    <div class="padding-header-mobile"></div>
+    <div class="feature-mobile">
+      <a class="item" href="./cart.html">
+        <div class="cart"><div class="menu-cart-qty"></div></div>
+        購物車
+      </a>
+      <div class="item member">
+        <img src="img/member-mobile.png" alt="member icon" />
+        會員
+      </div>
+    </div>
+    <main>
+      <section id="root" class="view">
+        <div class="container">
+          <div class="product-Img">
+            <img id="img" alt="產品圖片" />
+          </div>
+          <div class="product-Info">
+            <div class="product-Title" id="title"></div>
+            <div class="product-Id" id="id"></div>
+            <div class="product-Price" id="price">TWD.</div>
+            <hr />
+            <div class="colors box" id="colors">
+              <span class="title">顏色</span>
+            </div>
+            <div class="sizes box" id="sizes">
+              <span class="title">尺寸</span>
+            </div>
+            <div class="stock box">
+              <span class="title">數量</span>
+              <div class="chooser">
+                <div class="btn minus" id="minus">-</div>
+                <div class="value" id="value">1</div>
+                <div class="btn add" id="add">+</div>
+              </div>
+            </div>
+            <div class="add-Cart" id="add-Cart">加入購物車</div>
+            <div class="product-Summary" id="summary"></div>
+          </div>
+          <div class="more-Info">
+            <div class="more-Info-Title">
+              <span>更多產品資訊</span>
+              <hr />
+            </div>
+            <div class="description" id="description">
+              <div class="product-Story" id="story"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="view">
+        <nav>
+          <div class="group1">
+            <div class="menu-btn">
+              <a href="#">關於 Stylish</a>
+            </div>
+            <div class="menu-btn"><a href="#">服務條款</a></div>
+            <div class="menu-btn"><a href="#">隱私政策</a></div>
+          </div>
+          <div class="group2">
+            <div class="menu-btn"><a href="#">聯絡我們</a></div>
+            <div class="menu-btn"><a href="#">FAQ</a></div>
+          </div>
+        </nav>
+        <div class="social-link">
+          <div class="social-icon">
+            <img src="img/line.png" alt="line logo" />
+          </div>
+          <div class="social-icon">
+            <img src="img/twitter.png " alt="twitter logo" />
+          </div>
+          <div class="social-icon">
+            <img src="img/facebook.png" alt="fb logo" />
+          </div>
+        </div>
+        <div class="copyright">&copy; 2020. All rights reserved.</div>
+      </div>
+    </footer>
+  </body>
+</html>

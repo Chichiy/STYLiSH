@@ -1,0 +1,47 @@
+.view {
+  max-width: 900px;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  flex: auto;
+  text-align: center;
+  color: #3f3a3a;
+  line-height: 2;
+}
+.message > h1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+.message > hr {
+  margin: 10px 0;
+}
+.message > p {
+  font-size: 20px;
+}
+.message > #orderNumber {
+  font-size: 16px;
+  background-color: #ddd;
+  padding: 5px;
+}
+
+.message > a {
+  display: block;
+  font-size: 20px;
+  line-height: 80px;
+}
+
+.message > a:hover {
+  color: #c49871;
+}
+
+@media (max-width: 1000px) {
+  .view {
+    padding: 0;
+    margin-top: 100px;
+    height: 60vh;
+  }
+}

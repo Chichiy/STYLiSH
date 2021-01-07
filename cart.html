@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-DV1QQYSV9K"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-DV1QQYSV9K");
+    </script>
+    <title>STYLish 購物車</title>
+    <meta
+      name="description"
+      content="Online store sells only the most trending clothes and accessories for all genders."
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <script src="https://js.tappaysdk.com/tpdirect/v5.4.0"></script>
+    <script src="js/fb.js"></script>
+    <script src="js/static.js"></script>
+    <script src="js/cart.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="padding-mobile"></div>
+      <div class="logo">
+        <a href="."> <img src="img/logo.png" alt="STYLish logo" /></a>
+      </div>
+      <nav>
+        <div class="menu-btn"><a href="./?tag=women">女裝</a></div>
+        <div class="menu-btn"><a href="./?tag=men">男裝</a></div>
+        <div class="menu-btn"><a href="./?tag=accessories">配件</a></div>
+      </nav>
+      <div class="feature">
+        <form action="./" method="GET" class="input-container">
+          <input type="text" name="search" class="menu-search" id="search" />
+        </form>
+        <a href="./cart.html"
+          ><div class="menu-cart">
+            <div class="menu-cart-qty"></div></div
+        ></a>
+        <div class="menu-user member">
+          <img src="img/member.png" alt="member icon" />
+        </div>
+      </div>
+    </header>
+    <nav class="mobile-menu">
+      <div class="item"><a href="./?tag=women">女裝</a></div>
+      <div class="item"><a href="./?tag=men">男裝</a></div>
+      <div class="item"><a href="./?tag=accessories">配件</a></div>
+    </nav>
+    <div class="padding-header-mobile"></div>
+    <div class="feature-mobile">
+      <a class="item" href="./cart.html">
+        <div class="cart"><div class="menu-cart-qty"></div></div>
+        購物車
+      </a>
+      <div class="item member">
+        <img src="img/member-mobile.png" alt="member icon" />
+        會員
+      </div>
+    </div>
+    <main>
+      <section id="root" class="view">
+        <div class="container">
+          <div class="row title">
+            <div class="product-Info"></div>
+            <div class="qty">數量</div>
+            <div class="price">單價</div>
+            <div class="subtotal">小計</div>
+          </div>
+          <div class="list" id="list"></div>
+          <div class="target">
+            <div class="country">
+              <span>運送國家</span>
+              <select id="country">
+                <option value="delivery">台灣或離島</option>
+              </select>
+            </div>
+            <div class="payment">
+              <span>付款方式</span>
+              <select id="payment">
+                <option value="credit_card">信用卡付款</option>
+              </select>
+            </div>
+          </div>
+          <div class="note">
+            <p>
+              ※ 提醒您： <br />
+              ● 請填寫正確收件人資訊，避免包裹配送不達<br />
+              ● 請填寫正確收件人姓名 ( 與證件相符 )，避免無法領取<br />
+            </p>
+          </div>
+          <div class="recipient">
+            <span>收件資料</span>
+            <hr />
+            <div class="line name">
+              <span>收件人姓名</span>
+              <div class="input"><input type="text" id="name" /></div>
+            </div>
+            <div class="line email">
+              <span>Email</span>
+              <div class="input"><input type="text" id="email" /></div>
+            </div>
+            <div class="line cellphone">
+              <span>手機號碼</span>
+              <div class="input"><input type="text" id="cellphone" /></div>
+            </div>
+            <div class="line address">
+              <span>收件地址</span>
+              <div class="input"><input type="text" id="address" /></div>
+            </div>
+            <div class="line time" id="time">
+              <span>配送時間</span>
+              <div class="input">
+                <label>
+                  <input value="morning" name="time" type="radio" />
+                  <span> 08:00-12:00</span>
+                </label>
+                <label>
+                  <input value="afternoon" name="time" type="radio" />
+                  <span> 14:00-18:00</span>
+                </label>
+                <label>
+                  <input value="anytime" name="time" type="radio" checked />
+                  <span> 不指定</span>
+                </label>
+              </div>
+            </div>
+            <hr />
+          </div>
+          <div class="payment-Info">
+            <span>付款資料</span>
+            <hr />
+            <div class="line">
+              <span>信用卡號碼</span>
+              <div class="tpfield" id="card-number"></div>
+            </div>
+            <div class="line">
+              <span>有效期限</span>
+              <div class="tpfield" id="card-expiration-date"></div>
+            </div>
+            <div class="line">
+              <span>安全碼</span>
+              <div class="tpfield" id="card-ccv"></div>
+            </div>
+
+            <hr />
+          </div>
+          <div class="checkout">
+            <div class="line">
+              <span>總金額</span><span>NT.&ensp;</span>
+              <span id="subtotal"></span>
+            </div>
+            <div class="line">
+              <span>運費</span><span>NT.&ensp;</span>
+              <span id="freight"></span>
+            </div>
+            <hr />
+            <div class="line">
+              <span>應付金額</span><span>NT.&ensp;</span>
+              <span id="total"></span>
+            </div>
+            <button
+              class="checkout-Btn checkout-Btn-Disable"
+              id="checkoutBtn"
+              disabled
+            >
+              確認付款
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="view">
+        <nav>
+          <div class="group1">
+            <div class="menu-btn">
+              <a href="#">關於 Stylish</a>
+            </div>
+            <div class="menu-btn"><a href="#">服務條款</a></div>
+            <div class="menu-btn"><a href="#">隱私政策</a></div>
+          </div>
+          <div class="group2">
+            <div class="menu-btn"><a href="#">聯絡我們</a></div>
+            <div class="menu-btn"><a href="#">FAQ</a></div>
+          </div>
+        </nav>
+        <div class="social-link">
+          <div class="social-icon">
+            <img src="img/line.png" alt="line logo" />
+          </div>
+          <div class="social-icon">
+            <img src="img/twitter.png" alt="twitter logo" />
+          </div>
+          <div class="social-icon">
+            <img src="img/facebook.png" alt="fb logo" />
+          </div>
+        </div>
+        <div class="copyright">&copy; 2020. All rights reserved.</div>
+      </div>
+    </footer>
+  </body>
+</html>

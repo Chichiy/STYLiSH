@@ -1,0 +1,116 @@
+.view {
+  max-width: 900px;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  font-family: NotoSansCJKtc;
+  display: flex;
+  color: #3f3a3a;
+  line-height: 1.5;
+  align-items: center;
+}
+
+.container > .userImg {
+  width: 200px;
+  height: 200px;
+  flex: none;
+  position: relative;
+}
+.userImg > img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3px;
+  border: 1px solid #3f3a3a;
+}
+
+.hidden {
+  display: none;
+}
+
+.container > .userInfo {
+  flex: auto;
+  margin-left: 40px;
+  line-height: 2;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.userInfo > h1 {
+  font-size: 24px;
+  letter-spacing: 10px;
+  width: 100%;
+}
+.userInfo > hr {
+  width: 100%;
+  margin: 5px 0 15px;
+}
+
+.userInfo span {
+  letter-spacing: 5px;
+}
+
+.userInfo > .name,
+.userInfo > .email {
+  width: 100%;
+}
+
+#logOut {
+  background-color: #000;
+  color: #fff;
+  line-height: 30px;
+  padding: 5px 5px 5px 15px;
+  flex: none;
+  width: 60px;
+  height: 30px;
+
+  text-align: center;
+  letter-spacing: 10px;
+  cursor: pointer;
+}
+
+#logOut:active {
+  background-color: #bbb;
+  color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .view {
+    margin-top: 100px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 870px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .container > .userImg {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .container > .userInfo {
+    margin-left: 0px;
+  }
+  @media (max-width: 500px) {
+    .view {
+      height: auto;
+    }
+    #logOut {
+      width: 100%;
+      margin-top: 20px;
+      padding: 5px 0;
+    }
+  }
+}

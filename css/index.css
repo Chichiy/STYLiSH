@@ -1,0 +1,122 @@
+main .view span {
+  text-align: center;
+  display: block;
+}
+
+.keyVisual {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.keyVisual > .visualImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  transition: opacity 1s;
+  opacity: 0%;
+}
+
+.keyVisual > .current {
+  opacity: 100%;
+  z-index: 10;
+}
+
+.keyVisual > .visualImg > .story {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 2;
+  color: var(--charcoal-grey);
+  text-shadow: 0 0 0.3em #fff;
+}
+
+.circleContainer {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  display: flex;
+  margin: 20px 0;
+  z-index: 20;
+}
+
+.circleContainer > .circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #eee;
+  margin: 0 20px;
+  transition: background-color 1s;
+}
+.circleContainer > .current {
+  background-color: var(--charcoal-grey);
+}
+.circleContainer > .circle:hover {
+  background-color: var(--charcoal-grey);
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.product {
+  flex: none;
+  display: block;
+  margin: 2%;
+  width: 28%;
+}
+.product-photo img {
+  width: 100%;
+}
+
+.product .colors {
+  margin: 20px 0;
+}
+
+.product .colors > .color {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: inline-block;
+  box-shadow: 0 0 1px #313538;
+}
+
+.product-info {
+  font-family: NotoSansCJKtc;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 4px;
+  text-align: left;
+  color: #3f3a3a;
+}
+
+@media (max-width: 1000px) {
+  .keyVisual {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .keyVisual {
+    height: 350px;
+  }
+  .product {
+    width: 45%;
+  }
+  .keyVisual > .visualImg > .story {
+    font-size: 16px;
+  }
+  .circleContainer > .circle {
+    width: 8px;
+    height: 8px;
+    margin: 0 10px;
+  }
+}
