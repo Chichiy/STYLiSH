@@ -34,11 +34,6 @@ var app = {
   },
 };
 
-//print
-app.print = (t) => {
-  console.log(t);
-};
-
 app.get = {
   id: (queryname) => {
     return document.getElementById(`${queryname}`);

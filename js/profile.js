@@ -27,7 +27,6 @@ function fbInit() {
 function statusChangeCallback(res) {
   if (res.status === "connected") {
     app.fbInfo = res;
-    console.log("Already signed in");
     signIn(app.fbInfo.authResponse.accessToken, (res) => renderProfile(res));
   } else {
     FB.login((res) => afterLogin(res), {
@@ -47,22 +46,10 @@ function afterLogin(res) {
 }
 
 function renderProfile(res) {
-  app.print(res);
   app.get.id("userImg").src = res.picture;
   app.get.id("userImg").classList.toggle("hidden");
   app.get.id("name").innerHTML += res.name;
   app.get.id("email").innerHTML += res.email;
-
-  // FB.api(
-  //   "/me",
-  //   "GET",
-  //   { fields: "email,name,picture.width(200).height(200)" },
-  //   function (res) {
-  //     app.get("id", "userImg").src = res.picture.data.url;
-  //     app.get("id", "name").innerHTML += res.name;
-  //     app.get("id", "email").innerHTML += res.email;
-  //   }
-  // );
 
   //enable sign out btn
   app.get.id("logOut").onclick = () => {

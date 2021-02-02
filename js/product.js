@@ -233,7 +233,6 @@ app.renderProduct = (res) => {
 app.init = () => {
   app.getStorage("cart"); //get local storage and update cart display
   app.ajax(src.details, (res) => app.renderProduct(res));
-  console.log("All resources finished loading!");
 };
 
 window.addEventListener("DOMContentLoaded", app.init);

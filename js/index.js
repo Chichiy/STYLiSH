@@ -46,7 +46,7 @@ app.createProduct = (index) => {
   return content;
 };
 
-//infinite scroll
+// infinite scroll
 app.addProducts = () => {
   if (app.resObj.next_paging) {
     if (src[tag]) {
@@ -64,13 +64,13 @@ app.addProducts = () => {
 window.addEventListener("scroll", function () {
   let rect = document.body.getBoundingClientRect();
   let y = rect.bottom - window.innerHeight;
-  //console.log(y); show distance between bottom
+  // show distance between bottom
   if (y < 1 && y >= 0) {
     app.addProducts();
   }
 });
 
-//render product list
+// render product list
 app.renderProductList = (res) => {
   app.resObj = JSON.parse(res);
   if (app.resObj.data.length == 0) {

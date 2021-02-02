@@ -39,7 +39,6 @@ function statusChangeCallback(res) {
     btn.onclick = () => {
       //if logged-in, re-direct to profile page
       if (res.status === "connected") {
-        console.log("Already signed in");
         window.location = "./profile.html";
       } else {
         //if not logged-in, ask to log-in with FB then re-direct to profile page
@@ -55,6 +54,6 @@ function afterLogin(res) {
   if (res.authResponse) {
     window.location = "./profile.html";
   } else {
-    console.log("User cancelled login or did not fully authorize.");
+    //  User cancelled login or did not fully authorize.
   }
 }
